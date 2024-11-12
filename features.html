@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SafeGuard - Women's Safety App</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #8b5cf6, #ec4899);
+        min-height: 100vh;
+      }
+
+      nav {
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #ec4899;
+      }
+
+      .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 2rem;
+      }
+
+      .content {
+        background: white;
+        padding: 3rem;
+        border-radius: 20px;
+        text-align: center;
+        max-width: 600px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        animation: fadeInUp 1s ease;
+      }
+
+      .logo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 2rem;
+        position: relative;
+        animation: pulse 2s infinite;
+      }
+
+      .shield {
+        background: #ec4899;
+        border-radius: 15px;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .shield svg {
+        width: 80px;
+        height: 80px;
+        fill: white;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 2rem;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .feature {
+        padding: 1.5rem;
+        background: #f8f8f8;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .feature:hover {
+        transform: translateY(-5px);
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="unusual_activity.html">Unusual Activity</a></li>
+          <li><a href="map.html">Map and Location</a></li>
+          <li><a href="details.html">Alert System</a></li>
+          <li><a href="https://chatbot-becodewala.netlify.app/">Chatbot</a></li>
+          <li>
+            <a href="https://moonlit-salmiakki-2978a0.netlify.app/"
+              >Face Detection</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <style>
+      nav ul {
+        list-style-type: none; /* Removes bullet points */
+        display: flex; /* Aligns items horizontally */
+        padding: 0;
+        margin: 0;
+        justify-content: space-around; /* Optional: add space between items */
+      }
+
+      nav ul li {
+        margin: 0 10px; /* Optional: adds spacing between items */
+      }
+
+      nav ul li a {
+        text-decoration: none; /* Removes underline */
+        color: #333; /* Adjust color as needed */
+        padding: 10px 15px;
+        display: block;
+      }
+
+      nav ul li a:hover {
+        background-color: #f0f0f0; /* Hover effect */
+        border-radius: 5px;
+      }
+    </style>
+
+    <div class="hero">
+      <div class="content">
+        <div class="logo">
+          <div class="shield">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
+              />
+            </svg>
+          </div>
+        </div>
+        <h1>SafeGuard</h1>
+        <p class="tagline">Empowering Women's Safety with Technology</p>
+
+        <div class="features">
+          <div class="feature">
+            <h3>Emergency Alert</h3>
+            <p>Quick access to emergency contacts and authorities</p>
+          </div>
+          <div class="feature">
+            <h3>Location Tracking</h3>
+            <p>Real-time location sharing with trusted contacts</p>
+          </div>
+          <div class="feature">
+            <h3>24/7 Support</h3>
+            <p>Round-the-clock assistance and response team</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

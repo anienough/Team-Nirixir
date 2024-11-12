@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unusual Activity - Nirxir</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: linear-gradient(135deg, #8b5cf6, #ec4899);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Styling for the navigation bar */
+      nav {
+        background-color: #060606;
+        padding: 1em;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fefcfc;
+        text-decoration: none;
+        font-size: 1.1em;
+        transition: color 0.3s;
+      }
+
+      /* Hover effect for nav items */
+      nav a:hover {
+        color: #ec4899;
+      }
+
+      /* Unusual activity section styling */
+      .unusual-activity-content {
+        padding: 2em;
+        text-align: center;
+      }
+
+      .activity-section h2 {
+        margin-bottom: 0.5em;
+      }
+
+      .message,
+      .alert {
+        background-color: #0d0d0d;
+        border: 1px solid #ddd;
+        padding: 1em;
+        margin: 1em 0;
+        border-radius: 8px;
+        transition: transform 0.3s, background-color 0.3s;
+        cursor: pointer;
+      }
+
+      /* Hover effect for messages and alerts */
+      .message:hover,
+      .alert:hover {
+        background-color: #e96eed;
+        transform: scale(1.05);
+      }
+
+      /* Response symbols styling */
+      .status-symbol {
+        font-size: 1.5em;
+        margin-left: 10px;
+      }
+
+      /* Text sliding effect */
+      .sliding-text {
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+        animation: slide-in 5s infinite linear;
+      }
+
+      @keyframes slide-in {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="unusual_activity.html">Unusual Activity</a></li>
+        <li><a href="map.html">Map and Location</a></li>
+        <li><a href="details.html">Alert System</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="https://chatbot-becodewala.netlify.app/">Chatbot</a></li>
+        <li>
+          <a href="https://moonlit-salmiakki-2978a0.netlify.app/"
+            >Face Detection</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section class="unusual-activity-content">
+      <h1 class="sliding-text">Unusual Activity Detected</h1>
+
+      <div class="activity-section">
+        <h2>Messages Requesting Security</h2>
+        <div class="message">
+          <p><strong>Location:</strong> Central Park, New Delhi</p>
+          <p>
+            <strong>Message:</strong> Woman being followed by an unknown
+            individual.
+          </p>
+          <span class="status-symbol">🟠</span>
+        </div>
+        <div class="message">
+          <p><strong>Location:</strong> Downtown LA, Lawrence Delhi</p>
+          <p>
+            <strong>Message:</strong> Suspicious activity near a residential
+            area.
+          </p>
+          <span class="status-symbol">🔴</span>
+        </div>
+      </div>
+
+      <div class="activity-section">
+        <h2>Women in Danger Alert System</h2>
+        <div class="alert">
+          <p>
+            <strong>Alert:</strong> Woman in danger near Subway Station, Delhi.
+          </p>
+          <span class="status-symbol">⚠️</span>
+        </div>
+        <div class="alert">
+          <p>
+            <strong>Alert:</strong> Distress signal received from a mobile app
+            user in GOA Beach, FL.
+          </p>
+          <span class="status-symbol">🔴</span>
+        </div>
+      </div>
+
+      <div class="activity-section">
+        <h2>Response Symbols</h2>
+        <p>Use these symbols to indicate the status of the situation:</p>
+        <ul>
+          <li>🟢 - Situation under control</li>
+        </ul>
+      </div>
+    </section>
+
+    <script>
+      // JavaScript for zoom-in and zoom-out effect on messages and alerts
+      const elements = document.querySelectorAll(".message, .alert");
+
+      elements.forEach((element) => {
+        element.addEventListener("mouseover", () => {
+          element.style.transform = "scale(1.1)";
+        });
+
+        element.addEventListener("mouseout", () => {
+          element.style.transform = "scale(1)";
+        });
+      });
+    </script>
+  </body>
+</html>
