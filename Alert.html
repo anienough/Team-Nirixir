@@ -3,29 +3,247 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alert System - Nirxir</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Alert Details - Nirxir Women's Shield and Safety</title>
+    <style>
+      /* Body styling */
+      body {
+        background-color: #ec4899;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Navbar styling */
+      nav {
+        background-color: #000;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      nav ul li {
+        display: inline;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: transform 0.3s, color 0.3s;
+      }
+
+      /* Text zoom and color change on hover */
+      nav ul li a:hover {
+        transform: scale(1.1);
+        color: #ff1493; /* Highlight color */
+      }
+
+      /* Content styling */
+      .content-container {
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      .alert-success,
+      .fir-report {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .symbol {
+        font-weight: bold;
+      }
+
+      .video-container {
+        margin-top: 10px;
+      }
+
+      .alert-video {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 8px;
+      }
+
+      /* Form styling */
+      form label {
+        display: block;
+        margin-top: 10px;
+        color: #333;
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      form button {
+        background-color: #ec4899;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      form button:hover {
+        background-color: #ff69b4;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 600px) {
+        nav ul {
+          flex-direction: column;
+        }
+
+        nav ul li {
+          margin: 5px 0;
+        }
+
+        form button {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Login</a></li>
-        
-        <li><a href="unusual_activity.html">Unusual Activity</a></li>
-        <li><a href="map.html">Map and Location</a></li>
-        
-        <li><a href="details.html">Alert System </a></li>
-        <li><a href="features.html">Features</a></li>
-        <li><a href="https://chatbot-becodewala.netlify.app/">Chatbot</a></li>
+        <li>
+          <a style="color: white; text-decoration: none" href="index.html"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a style="color: white; text-decoration: none" href="login.html"
+            >Login</a
+          >
+        </li>
+        <li>
+          <a
+            style="color: white; text-decoration: none"
+            href="unusual_activity.html"
+            >Unusual Activity</a
+          >
+        </li>
+        <li>
+          <a style="color: white; text-decoration: none" href="map.html"
+            >Map and Location</a
+          >
+        </li>
+        <li>
+          <a style="color: white; text-decoration: none" href="Alert.html"
+            >Alert System</a
+          >
+        </li>
+        <li>
+          <a style="color: white; text-decoration: none" href="Detail.html"
+            >Details Section</a
+          >
+        </li>
+        <li>
+          <a
+            style="color: white; text-decoration: none"
+            href="https://moonlit-salmiakki-2978a0.netlify.app/"
+            >Face Detection</a
+          >
+        </li>
       </ul>
     </nav>
 
-    <section class="alert-content">
-      <h1>Alert System</h1>
-      <p>Alert functionality details go here.</p>
-    </section>
+    <div class="content-container">
+      <!-- Section 1: Alert Responded Successfully -->
+      <section class="alert-success">
+        <h1>Alert Responded Successfully</h1>
+        <p>
+          <span class="symbol">✔️</span> Location: Connaught Place, New Delhi
+        </p>
+        <p><span class="symbol">🔒</span> Status: Safe - No Threat Detected</p>
+        <div class="video-container">
+          <video src="dark.mp4" controls class="alert-video"></video>
+        </div>
+      </section>
 
-    <script src="script.js"></script>
+      <!-- Section 2: Real Threat - FIR Report -->
+      <section class="fir-report">
+        <h2>⚠️ Real Threat Detected - File FIR Report</h2>
+        <p>
+          If you believe there is a real threat, please provide the following
+          details to file an FIR with the Delhi Police:
+        </p>
+
+        <form id="fir-form">
+          <label for="fir-time">Time of Incident:</label>
+          <input
+            type="text"
+            id="fir-time"
+            name="fir-time"
+            placeholder="HH:MM AM/PM"
+          /><br />
+
+          <label for="fir-date">Date of Incident:</label>
+          <input type="date" id="fir-date" name="fir-date" /><br />
+
+          <label for="fir-duration">Duration:</label>
+          <input
+            type="text"
+            id="fir-duration"
+            name="fir-duration"
+            placeholder="e.g., 15 minutes"
+          /><br />
+
+          <label for="fir-complaint">Complaint Details:</label>
+          <textarea
+            id="fir-complaint"
+            name="fir-complaint"
+            placeholder="Describe the incident"
+          ></textarea
+          ><br />
+
+          <label for="fir-action">Action Taken:</label>
+          <textarea
+            id="fir-action"
+            name="fir-action"
+            placeholder="Describe any action taken"
+          ></textarea
+          ><br />
+
+          <label for="fir-session">Sessions & Trials:</label>
+          <textarea
+            id="fir-session"
+            name="fir-session"
+            placeholder="Details of sessions and trials"
+          ></textarea
+          ><br />
+
+          <button type="submit">Submit FIR Report</button>
+        </form>
+      </section>
+    </div>
+
+    <script>
+      // JavaScript for any additional interactivity can go here
+    </script>
   </body>
 </html>
