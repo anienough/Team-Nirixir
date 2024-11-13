@@ -13,6 +13,6 @@ Team member-
 [Adity Kymar Rai](https://github.com/Adityakumarraii),
 [Aniket Jatav](https://github.com/enoughio),
 [Abhishek Parihar](https://github.com/AbhishekPariharCoder),
-[Anshul](https://github.com/sharpedge12),
+[Anshul Sharma](https://github.com/sharpedge12),
 
 
